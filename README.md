@@ -22,7 +22,7 @@ SELECT
 FROM
     `students`
 WHERE
-    date_of_birth < DATE_SUB(CURDATE(), INTERVAL 30 YEAR);
+    `date_of_birth` < DATE_SUB(CURDATE(), INTERVAL 30 YEAR);
 
 ## 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)
 SELECT 
@@ -70,3 +70,46 @@ FROM
     `teachers`
 WHERE
     `phone` IS NULL;
+
+
+
+<!-- ESERCIZI PERSONALI -->
+## 9. Quanti sono gli insegnanti che hanno un numero di telefono? (50)
+SELECT 
+    *
+FROM
+    `teachers`
+WHERE
+    `phone` IS NOT NULL;
+
+## 10. Selezionare tutti i corsi di laurea triennale (37)
+SELECT 
+    *
+FROM
+    `degrees`
+WHERE
+    `level` = 'triennale';
+
+## 11. Selezionare tutti gli studenti che hanno meno di 30 anni
+SELECT 
+    *
+FROM
+    `students`
+WHERE
+    `date_of_birth` > DATE_SUB(CURDATE(), INTERVAL 30 YEAR);
+
+## 12. Selezionare tutti i corsi che non hanno un website (676)
+SELECT 
+    *
+FROM
+    `courses`
+WHERE
+    `website` IS NULL;
+
+## 13. Selezionare tutti i corsi che hanno un website (641)
+SELECT 
+    *
+FROM
+    `courses`
+WHERE
+    `website` IS NOT NULL;
