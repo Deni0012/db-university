@@ -72,7 +72,7 @@ WHERE
     `phone` IS NULL;
 
 
-
+# Esercizi Personali
 <!-- ESERCIZI PERSONALI -->
 ## 9. Quanti sono gli insegnanti che hanno un numero di telefono? (50)
 SELECT 
@@ -113,3 +113,20 @@ FROM
     `courses`
 WHERE
     `website` IS NOT NULL;
+
+
+# Giorno Due 
+
+## GROUP BY
+
+## 1. Contare quanti iscritti ci sono stati ogni anno
+
+SELECT 
+    COUNT(*), YEAR(`enrolment_date`) AS `registration_for_year`
+FROM
+    `students`
+GROUP BY `registration_for_year`;
+
+## 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+## 3. Calcolare la media dei voti di ogni appello d'esame
+## 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
